@@ -1,15 +1,13 @@
-// Base Class (Encapsulation + Abstraction)
+
 class Student {
     private String name;
     private int studentId;
 
-    // Constructor
     public Student(String name, int studentId) {
         this.name = name;
         this.studentId = studentId;
     }
 
-    // Getter methods (Encapsulation)
     public String getName() {
         return name;
     }
@@ -18,14 +16,13 @@ class Student {
         return studentId;
     }
 
-    // Method (can be overridden)
+
     public void displayInfo() {
         System.out.println("Name: " + name + ", ID: " + studentId);
     }
 }
 
 
-// Inheritance
 class Undergraduate extends Student {
     private String year;
 
@@ -34,7 +31,6 @@ class Undergraduate extends Student {
         this.year = year;
     }
 
-    // Polymorphism (method overriding)
     @Override
     public void displayInfo() {
         System.out.println("Undergraduate - Name: " + getName() +
@@ -44,7 +40,6 @@ class Undergraduate extends Student {
 }
 
 
-// Another child class
 class Graduate extends Student {
     private String researchTopic;
 
@@ -53,7 +48,7 @@ class Graduate extends Student {
         this.researchTopic = researchTopic;
     }
 
-    // Polymorphism
+
     @Override
     public void displayInfo() {
         System.out.println("Graduate - Name: " + getName() +
@@ -63,7 +58,7 @@ class Graduate extends Student {
 }
 
 
-// Manager class
+
 class StudentManager {
     private Student[] students = new Student[10]; // array to store students
     private int count = 0;
@@ -81,7 +76,6 @@ class StudentManager {
 }
 
 
-// Main class
 public class Main {
     public static void main(String[] args) {
 
