@@ -88,7 +88,7 @@ public class Main {
         StudentManager manager = new StudentManager();
 
         Undergraduate s1 = new Undergraduate("Anom", 797, "2nd Year");
-        Graduate s2 = new Graduate("Anom", 797, "Software");
+        Graduate s2 = new Graduate("Muhsin", 242, "Software");
 
         manager.addStudent(s1);
         manager.addStudent(s2);
