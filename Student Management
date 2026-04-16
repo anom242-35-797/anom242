@@ -1,0 +1,63 @@
+// Base Class (Encapsulation + Abstraction)
+class Student {
+    private String name;
+    private int studentId;
+
+    // Constructor
+    public Student(String name, int studentId) {
+        this.name = name;
+        this.studentId = studentId;
+    }
+
+    // Getter methods (Encapsulation)
+    public String getName() {
+        return name;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    // Method (can be overridden)
+    public void displayInfo() {
+        System.out.println("Name: " + name + ", ID: " + studentId);
+    }
+}
+
+
+// Inheritance
+class Undergraduate extends Student {
+    private String year;
+
+    public Undergraduate(String name, int studentId, String year) {
+        super(name, studentId); // call parent constructor
+        this.year = year;
+    }
+
+    // Polymorphism (method overriding)
+    @Override
+    public void displayInfo() {
+        System.out.println("Undergraduate - Name: " + getName() +
+                ", ID: " + getStudentId() +
+                ", Year: " + year);
+    }
+}
+
+
+// Another child class
+class Graduate extends Student {
+    private String researchTopic;
+
+    public Graduate(String name, int studentId, String researchTopic) {
+        super(name, studentId);
+        this.researchTopic = researchTopic;
+    }
+
+    // Polymorphism
+    @Override
+    public void displayInfo() {
+        System.out.println("Graduate - Name: " + getName() +
+                ", ID: " + getStudentId() +
+                ", Research: " + researchTopic);
+    }
+}
